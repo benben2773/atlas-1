@@ -14,6 +14,8 @@ steps:
     git clean -fd
     git clean -fX
     git clean -fx
+    export MAVEN_OPTS="-Xms2g -Xmx2g"
+    mvn clean -DskipTests package -Pdist,embedded-hbase-solr
 
 - task: Maven@3
   inputs:
