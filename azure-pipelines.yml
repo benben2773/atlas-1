@@ -15,6 +15,7 @@ steps:
     git clean -fX
     git clean -fx
     export MAVEN_OPTS="-Xms2g -Xmx2g"
+    rm azure-pipelines.yml
     mvn clean -DskipTests package -Pdist,embedded-hbase-solr
 
 
