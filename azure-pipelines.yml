@@ -10,11 +10,11 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- script:
+- script: |
     git clean -fd
     git clean -fX
     git clean -fx
-    
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
