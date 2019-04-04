@@ -35,7 +35,7 @@ ENV PATH /usr/java/bin:/usr/local/apache-maven/bin:/usr/local/sbin:/usr/local/bi
 WORKDIR /root
 
 # Pull down Atlas and build it into /root/atlas-bin.
-RUN git clone http://git.apache.org/atlas.git -b master
+RUN git clone https://github.com/benben2773/atlas-1.git -b master
 
 # Remove -DskipTests if unit tests are to be included
 RUN mvn clean install -DskipTests -Pdist,embedded-hbase-solr -f ./atlas/pom.xml
